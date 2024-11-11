@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.content-main{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin:5px;
+    border-top-right-radius: 15px;
+    border: 1px solid lightgray;
+   
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+.content-main h2{
+    margin:0;
+    padding:5px;
+    font-size:32px;
+    background-color: aqua;
+    border-top-right-radius: inherit;
+    border-bottom:1px solid lightgray;
+}
+.content-main div{
+    display: inline;
+    padding:5px;
+    font-size:18px;
+    background-color: aquamarine;
+}
+.content-main p{
+    margin:0;
+    padding:5px;
+    font-size:16px;
+    background-color: lightblue;
+}
