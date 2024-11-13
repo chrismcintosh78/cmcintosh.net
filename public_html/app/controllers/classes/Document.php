@@ -125,6 +125,10 @@ class Document
         return $this->objDocument->saveHTML();
     }
 }
+
+$objDoc = new Document("/var/www/html/cmcintosh.net/public_html/app/templates/app.html");
+$arrNodes = $objDoc->query('//*');
+var_dump($arrNodes);
 ?>
 
 
