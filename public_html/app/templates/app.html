@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{strPageTitle}}</title>
+    <title data-template="strPageTitle">{{strPageTitle}}</title>
 </head>
 <body>
     <div class="APP_PANE">
         <div class="PANE_HEADER">
-            <div class="">
-                <img src="res/img/logo.png" alt="Chris McIntosh Logo">
-            </div>
+            <nav class="HEADER_NAV">
+                <div class="NAV_BRAND">
+                    <logo><span class="material-symbols-outlined">owl</span></logo>
+                    <domain>cmcintosh.net</domain>
+                </div>
+                <ul class="NAV_LINKS">
+                    <li>
+                        <a href="/cmcintosh.net/public_html/public/?strRoute=/Home">Home</a>
+                    </li>
+                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Resume">Resume</a></li>
+                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Contact">Contact</a></li>
+                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Services">Services</a></li>
+                </ul>
+            </nav>
+                 
         </div>
-        <div class="PANE_CONTENT">
-            {{strContent}}
+        <div class="PANE_HERO">
+            &nbsp;
+        </div>
+        <div class="PANE_CONTENT" data-template="strViewContent">
+{{strPageHeading}}
         </div>
         <div class="PANE_FOOTER">
             &copy; 2022 Chris McIntosh. All rights reserved.

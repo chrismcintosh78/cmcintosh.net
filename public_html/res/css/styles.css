@@ -1,35 +1,178 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root{
+    /*COLORS*/
+    --app-clr-primary: #4389a1;
+    --app-clr-secondary:#a15b43;
+    --app-clr-primary-muted:#94c3d3;
+    --app-clr-secondary-muted:#d3a494;
+    /*TEXT*/
+    --app-clr-txt-drk: #2c3e50;
+    --app-clr-txt-lte:#ecf0f1;
+    --app-clr-txt:#bdc3c7;
+    --app-clr-link: #2c3e50;
+
+
+    /*BG*/
+    --app-clr-section-top: var(--app-clr-primary);
+
+    --app-nav-link-hover-color: #4389a1;
+
+
+    /*TYPO*/
+    --app-typo-fs : 14px;
+    --app-typo-h: 3rem;
+    --app-typo-nav: 1.5rem;
+    --app-typo-content-h: 2rem;
+    --app-typo-content-txt: 1rem;
+    --app-typo-content-subh: 1.5rem;
+    --app-typo-content-subtxt: 1rem;
+
+
+    /*SIZING*/
+    --app-section-padding: .5rem;
+    --app-layout-width : 100%;
+
+    /*LINKS*/
+
+
+    /*NAVIGATION*/
+    --app-nav-bg: #f8f9fa;
 }
-.content-main{
+
+/* Media queries for different breakpoints */
+/* Phone (max-width: 600px) */
+@media (max-width: 600px) {
+    :root {
+        --app-fs: 12px;
+        /* Smaller font size */
+        --app-layout-width:100%;
+        /* Slightly reduce layout width */
+    }
+
+    .app-pane {
+        grid-template-columns: 1fr;
+        /* One column layout for small screens */
+    }
+    /*GET RID OF THE NAV BAR AND SHOW THE TOGGLER*/
+    .nav-link{
+        display:none !important;
+    }
+    .nav-toggle{
+        display:block !important;
+    }
+}
+/* Tablet (min-width: 600px) and (max-width: 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    :root {
+        --app-fs: 14px;
+        /* Adjust font size for tablets */
+        --app-layout-width: 750px;
+        /* Adjust layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    :root {
+        --app-fs: 16px;
+        /* Slightly larger font size for small desktops */
+        --app-layout-width: 1100px;
+        /* Reduce layout width */
+    }
+}
+/* Large desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    :root {
+        --app-fs: 18px;
+        /* Larger font size for large desktops */
+        --app-layout-width: 80%;
+        /* Reduce layout width to create spacing */
+    }
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/gfont.woff2) format('woff2');
+  }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+
+  }
+  
+html {
+    font-size: var(--app-fs);
+}
+body {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    margin:5px;
-    border-top-right-radius: 15px;
-    border: 1px solid lightgray;
-   
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    align-items: center;
+    height: 100vh;
 }
-.content-main h2{
-    margin:0;
-    padding:5px;
-    font-size:32px;
-    background-color: aqua;
-    border-top-right-radius: inherit;
-    border-bottom:1px solid lightgray;
+
+.APP_PANE{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    outline: 1px solid black;
+    width: var(--app-layout-width);
+   /* height:100vh; */
+    height:auto;
 }
-.content-main div{
-    display: inline;
-    padding:5px;
-    font-size:18px;
-    background-color: aquamarine;
-}
-.content-main p{
-    margin:0;
-    padding:5px;
-    font-size:16px;
-    background-color: lightblue;
-}
+    .PANE_HEADER {
+        background-color: var(--app-clr-primary);
+        color: var(--app-clr-txt-drk);
+        text-align: center;
+    }
+        .HEADER_NAV{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: var(--app-fs);
+            padding: var(--app-section-padding);
+            padding-bottom:0px;
+        }
+            .NAV_BRAND{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+                .NAV_BRAND logo{
+                   padding:0px;
+                }
+                .NAV_BRAND domain{
+                    font-size: 1.5rem;
+                }
+            .NAV_LINKS{
+                display: flex;
+                list-style: none;
+                font-size:.75rem;
+            }
+                .NAV_LINKS li {
+                    border-bottom:3px solid var(--app-clr-primary)
+                }
+                .NAV_LINKS li:hover {
+                    background-color: var(--app-clr-primary-muted);
+                    border-bottom:3px solid var(--app-clr-link)
+                }
+                    .NAV_LINKS li a{
+                        color: var(--app-clr-txt-lte);
+                        display: block;
+                        padding: var(--app-section-padding);
+                        text-decoration: none;
+
+                    }
+
+    .PANE_CONTENT {}
+    .PANE_FOOTER {}

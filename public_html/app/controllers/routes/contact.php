@@ -1,5 +1,5 @@
 <?php
-class Home{
+class Contact{
     public $objTemplate;
     public $objView;
     public $objModel;
@@ -7,9 +7,9 @@ class Home{
     public function __construct($objTemplate){
         $this->objTemplate = $objTemplate;
         $this->arrData = [
-                            "strPageTitle" => "Home", 
-                            "htmIconLogo" => "<span class='material-symbols-outlined'>owl</span>",
-                            "strPageHeading" => "Welcome to our home page!"
+                            "strPageTitle" => "Contact", 
+                            "htmIconLogo" => "",
+                            "strPageHeading" => "Welcome to my Contact page!"
                         ];
         $this->objTemplate->addData($this->arrData);
         $this->objTemplate->compile();
