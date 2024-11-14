@@ -11,6 +11,8 @@ class Home{
                             "htmIconLogo" => "<span class='material-symbols-outlined'>owl</span>",
                             "strPageHeading" => "Welcome to our home page!"
                         ];
+        $objView = new View($GLOBALS["APP_PATH"]."/views/home.html");
+        $this->arrData["htmPrimary"] = $objView->htmPrimary;
         $this->objTemplate->addData($this->arrData);
         $this->objTemplate->compile();
         print $this->objTemplate->htmDocContent;

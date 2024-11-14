@@ -7,4 +7,5 @@ $GLOBALS["APP_PATH"] = $CONFIG['APP']['PATH'];
 require_once($GLOBALS["APP_PATH"] . "/controllers/classes/Router.php");
 require_once($GLOBALS["APP_PATH"] . "/controllers/classes/Document.php");
 require_once($GLOBALS["APP_PATH"] . "/controllers/classes/Template.php");
+require_once($GLOBALS["APP_PATH"] . "/controllers/classes/View.php");
 ?>

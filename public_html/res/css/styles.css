@@ -18,6 +18,7 @@
 
 
     /*TYPO*/
+    --app-typo-ff:Arial, Helvetica, sans-serif;
     --app-typo-fs : 14px;
     --app-typo-h: 3rem;
     --app-typo-nav: 1.5rem;
@@ -40,41 +41,62 @@
 
 /* Media queries for different breakpoints */
 /* Phone (max-width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     :root {
-        --app-fs: 12px;
+        --app-fs: 14px;
         /* Smaller font size */
-        --app-layout-width:100%;
         /* Slightly reduce layout width */
     }
-
-    .app-pane {
-        grid-template-columns: 1fr;
-        /* One column layout for small screens */
+    .HEADER_NAV{
+        flex-direction: column;
+        align-items: flex-start !important;
     }
-    /*GET RID OF THE NAV BAR AND SHOW THE TOGGLER*/
-    .nav-link{
-        display:none !important;
-    }
-    .nav-toggle{
-        display:block !important;
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (max-width: 650px) {
+    :root {
+        --app-fs: 14px;
+        /* Slightly larger font size for small desktops */
+        /* Reduce layout width */
     }
 }
 /* Tablet (min-width: 600px) and (max-width: 900px) */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 500px) and (max-width: 800px) {
     :root {
         --app-fs: 14px;
         /* Adjust font size for tablets */
-        --app-layout-width: 750px;
+        /*--app-layout-width: 650px;*/
         /* Adjust layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 650px) and (max-width: 950px) {
+    :root {
+        --app-fs: 16px;
+        /* Slightly larger font size for small desktops */
+       /* --app-layout-width: 800px;*/
+       --app-layout-width: 100%;
+        /* Reduce layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 800px) and (max-width: 1100px) {
+    :root {
+        --app-fs: 16px;
+        /* Slightly larger font size for small desktops */
+       /* --app-layout-width: 950px; */
+       --app-layout-width: 85vw;
+
+        /* Reduce layout width */
     }
 }
 /* Small desktop (min-width: 900px) and (max-width: 1200px) */
 @media (min-width: 900px) and (max-width: 1200px) {
     :root {
-        --app-fs: 16px;
+        --app-fs: 18px;
         /* Slightly larger font size for small desktops */
-        --app-layout-width: 1100px;
+        /* --app-layout-width: 1100px; */
+        --app-layout-width: 82.5vw;
         /* Reduce layout width */
     }
 }
@@ -83,7 +105,7 @@
     :root {
         --app-fs: 18px;
         /* Larger font size for large desktops */
-        --app-layout-width: 80%;
+        --app-layout-width: 80vw;
         /* Reduce layout width to create spacing */
     }
 }
@@ -107,10 +129,11 @@
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
-
+    color: var(--app-clr-txt-lte);
   }
   
 html {
+    font-family: var(--app-typo-ff);
     font-size: var(--app-fs);
 }
 body {
@@ -151,7 +174,7 @@ body {
                 .NAV_BRAND logo{
                    padding:0px;
                 }
-                .NAV_BRAND domain{
+                .NAV_BRAND name{
                     font-size: 1.5rem;
                 }
             .NAV_LINKS{
@@ -164,7 +187,9 @@ body {
                 }
                 .NAV_LINKS li:hover {
                     background-color: var(--app-clr-primary-muted);
-                    border-bottom:3px solid var(--app-clr-link)
+                    border-bottom:3px solid var(--app-clr-link);
+                    border-top-left-radius: 15px;
+                    color: var(--app-clr-secondary);
                 }
                     .NAV_LINKS li a{
                         color: var(--app-clr-txt-lte);
@@ -172,6 +197,9 @@ body {
                         padding: var(--app-section-padding);
                         text-decoration: none;
 
+                    }
+                    .NAV_LINKS li a:hover{
+                        color: var(--app-clr-secondary);
                     }
 
     .PANE_CONTENT {}
