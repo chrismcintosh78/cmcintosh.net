@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background-color: #f0f0f0;
+        }
+        .skill {
+            margin: 10px;
+            font-size: 24px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .skill.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="hero" id="hero"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        const iconMap = {
+            "JavaScript": "bx bxl-javascript",
+            "TypeScript": "bx bxl-typescript",
+            "React": "bx bxl-react",
+            "Redux": "",
+            "Node.js": "bx bxl-nodejs",
+            "Express": "",
+            "MongoDB": "",
+            "MySQL": "",
+            "PostgreSQL": "",
+            "GraphQL": "",
+            "Python": "bx bxl-python",
+            "Django": "",
+            "PyTorch": "",
+            "FastAPI": "",
+            "Django Channels": "",
+            "Docker": "bx bxl-docker"
+        };
+
+        $(document).ready(function() {
+            const $hero = $('#hero');
+
+            $.each(iconMap, function(skill, iconClass) {
+                const $skillElement = $('<div></div>', {
+                    class: 'skill',
+                    html: iconClass ? `<i class="${iconClass}"></i>` : skill
+                });
+                $hero.append($skillElement);
+            });
+
+            function animateSkills() {
+                $('.skill').each(function(index) {
+                    const $skillElement = $(this);
+                    setTimeout(function() {
+                        $skillElement.addClass('visible');
+                    }, index * 200);
+
+                    setTimeout(function() {
+                        $skillElement.removeClass('visible');
+                    }, 5000 + index * 200);
+                });
+            }
+
+            animateSkills();
+            setInterval(animateSkills, 10000); // Repeat every 10 seconds
+        });
+    </script>
+</body>
+</html>

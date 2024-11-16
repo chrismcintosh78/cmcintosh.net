@@ -1,16 +1,29 @@
 <?php
-class View extends Document{
+class View{
     public $strViewPath;
+    public $objPrimary;
+    public $objSecondary;
     public $htmPrimary;
-    public $htmSecondary;
 
     public function __construct($strViewPath) {
-        parent::__construct($strViewPath);
-        $this->strViewPath = $strViewPath;
-        //GET THE PRIMARY and SECONDARY nodes from the view
-        $primaryNode = $this->objDocMAP->query('//primary')->item(0);
-        $this->htmPrimary = $primaryNode ? $primaryNode->ownerDocument->saveHTML($primaryNode) : '';
-        $this->htmSecondary = $this->objDocMAP->query('//secondary')->item(0)->nodeValue;
+        // Get the view template content
+        $htmViewTemplate = file_get_contents($strViewPath);
+
+        // Extract the model JSON file name from the view path
+        $strModelName = basename($strViewPath, '.html') . '.json';
+        $strModelPath = dirname(dirname($strViewPath)) . '/models/' . $strModelName;
+
+        // Load the JSON data
+        if (file_exists($strModelPath)) {
+            $strJsonContent = file_get_contents($strModelPath);
+            $objJson = json_decode($strJsonContent);
+
+            // Compile the view HTML using the JSON data
+            $this->htmPrimary = Template::Compile($htmViewTemplate, $objJson);
+        } else {
+            // If the model file doesn't exist, use the raw template
+            $this->htmPrimary = $htmViewTemplate;
+        }
     }
 }
 ?>

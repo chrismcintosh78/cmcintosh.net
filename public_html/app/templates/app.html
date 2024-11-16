@@ -10,27 +10,35 @@
         <div class="PANE_HEADER">
             <nav class="HEADER_NAV">
                 <div class="NAV_BRAND">
-                    <logo><span class="material-symbols-outlined">owl</span></logo>
-                    <name>Chris McIntosh</name>
+                    <logo>{{htmGoogleIcon}}</logo>
+                    <name id="{{strDyn}}">Chris McIntosh</name>
                 </div>
                 <ul class="NAV_LINKS">
-                    <li>
-                        <a href="/cmcintosh.net/public_html/public/?strRoute=/Home">Home</a>
-                    </li>
+                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Home">Home</a></li>
                     <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Resume">Resume</a></li>
                     <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Contact">Contact</a></li>
-                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Services">Services</a></li>
-                    
+                    <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Services">Services</a></li> 
                 </ul>
             </nav>
                  
         </div>
         <div class="PANE_HERO">
-            &nbsp;
         </div>
-        <div class="PANE_CONTENT" data-template="strViewContent">
-        {{htmPrimary}}
+        <div class="PANE_CONTENT_MAIN">
+            {{htmMain}}
         </div>
+        <div class="PANE_CONTENT_INFO" data-template="strViewContent">
+            <div class="CONTENT_LEFT">
+                {{strPageHeading}}
+            </div>
+            <div class="CONTENT_CENTER">
+                middle spot
+            </div>
+            <div class="CONTENT_RIGHT">
+                another home related cta
+            </div>
+        </div>
+
         <div class="PANE_FOOTER">
             &copy; 2022 Chris McIntosh. All rights reserved.
         </div>

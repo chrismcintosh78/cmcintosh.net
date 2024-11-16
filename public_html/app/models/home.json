@@ -1,21 +1,7 @@
 {
-    "skills": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Redux",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "MySQL",
-        "PostgreSQL",
-        "GraphQL",
-        "Python",
-        "Django",
-        "PyTorch",
-        "FastAPI",
-        "Django Channels",
-        "Docker"
-    ]
-
+    "intro": {
+            "para1" : "Welcome to cmcintosh.net! I’m Christopher McIntosh, a seasoned Full Stack Developer with over 15 years of experience navigating the ever-evolving world of technology. My journey has equipped me with a profound understanding of digital solutions, ranging from web applications to computer and network repair.",
+            "para2" :  "If you’re a coder, explore my current projects for inspiration. Potential employers can view the web version of my resume, showcasing my professional journey. And if you’re in need of a custom web application, expert consulting, or reliable computer and network repair services, request a quote tailored to your needs. Let’s build something extraordinary together!"   
+        }
 }
+
