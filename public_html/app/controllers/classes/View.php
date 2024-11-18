@@ -5,13 +5,12 @@ class View{
     public $objSecondary;
     public $htmPrimary;
 
-    public function __construct($strViewPath) {
+    public function __construct($objModel) {
         // Get the view template content
         $htmViewTemplate = file_get_contents($strViewPath);
-
+        
         // Extract the model JSON file name from the view path
-        $strModelName = basename($strViewPath, '.html') . '.json';
-        $strModelPath = dirname(dirname($strViewPath)) . '/models/' . $strModelName;
+
         $arrPageInfo = [
                         "CONTENT_LEFT"=>"",
                         "CONTENT_CENTER"=>"",
@@ -30,6 +29,12 @@ class View{
             // If the model file doesn't exist, use the raw template
             $this->htmPrimary = $htmViewTemplate;
         }
+        $GLOBALS["OBJ_TEMPLATE"]->addData($arrPageInfo);
+        $objTemplate = new Template($GLOBALS["TEMPLATE_PATH"]);
+
+        $this->objTemplate->addData($this->arrData);
+        $this->objTemplate->_compile();
+        print $this->objTemplate->htmDocContent;
     }
 }
 ?>

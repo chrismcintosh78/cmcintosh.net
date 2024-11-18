@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-template="strPageTitle">{{strPageTitle}}</title>
+    <title data-template="strPageTitle">{{APP_TITLE}}</title>
 </head>
 <body>
     <div class="APP_PANE">
         <div class="PANE_HEADER">
             <nav class="HEADER_NAV">
                 <div class="NAV_BRAND">
-                    <logo>{{htmGoogleIcon}}</logo>
-                    <name id="{{strDyn}}">Chris McIntosh</name>
+                    <logo>{{APP_LOGO}}</logo>
+                    <name>{{APP_NAME}}</name>
                 </div>
                 <ul class="NAV_LINKS">
                     <li><a href="/cmcintosh.net/public_html/public/?strRoute=/Home">Home</a></li>
@@ -24,25 +24,9 @@
         </div>
         <div class="PANE_HERO">
         </div>
-        <div class="PANE_CONTENT_MAIN">
-            {{htmMain}}
-        </div>
-        <div class="PANE_CONTENT_INFO" data-template="strViewContent">
-            <div class="CONTENT_LEFT">
-            
-
-            </div>
-            <div class="CONTENT_CENTER">
-
-            </div>
-            <div class="CONTENT_RIGHT">
-                
-
-            </div>
-        </div>
-
+        {{VIEW}}
         <div class="PANE_FOOTER">
-            &copy; 2022 Chris McIntosh. All rights reserved.
+            &copy; 2022 {{APP_NAME}}. All rights reserved.
         </div>
     </div>
 </body>

@@ -58,13 +58,13 @@ class Template extends Document{
             }
         }
     }
-    public function addData($strKey, $strValue=false){
-        if(is_array($strKey)){
-            foreach ($strKey as $key => $value) {
-                $this->addData($key, $value);
-            }
-        }else{
-            $this->arrData[$strKey] = $strValue;
+    public function addData($key, $strValue=false){
+        if(is_array($key) or is_object($key)){
+            foreach ($key as $arrKey => $arrValue) {
+                $this->addData($arrKey, $arrValue);
+            }   
+        }else if(is_string($key))  {
+            $this->arrData[$key] = $strValue;
         }
     }
     public function remData($strKey){

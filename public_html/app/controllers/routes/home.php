@@ -5,22 +5,22 @@ class Home{
     public $objModel;
     public $arrData;
     public function __construct($strSubRoute){
-        $objTemplate = new Template($GLOBALS["TEMPLATE_PATH"]);
-        $this->objTemplate = $objTemplate;
-        $this->arrData = [
-                            "strPageTitle" => "Home", 
-                            "htmGoogleIcon" => "<span class='material-symbols-outlined'>owl</span>",
+        //the view should resnder the doc so this contoller should be preparing the data and sending it to thee view, 
+        //the view should nnot be conection to any models  the controllr should be getting tha t data
+        $strModelPath = $GLOBALS["APP_PATH"] . '/models/home.json';
+        $jsnPageData = file_get_contents($strModelPath);
+        $objModel = json_decode($jsnPageData);
+        $objModel->strPageName = "Home";
+        $objModel->arrParams = [
+                            "htmGoogleIcon" => "",
                             "strPageHeading" => $strSubRoute,
                             "strDyn" => "myid"
                         ];
-        $objView = new View($GLOBALS["APP_PATH"]."/views/home.html");
+        $objView = new View($objModel);
         //var_dump($objView->objPrimary);
         //var_dump($objView->objPrimary);
-        $this->arrData["htmMain"] = $objView->htmPrimary;
+        //$this->arrData["htmMain"] = $objView->htmPrimary;
 
-        $this->objTemplate->addData($this->arrData);
-        $this->objTemplate->_compile();
-        print $this->objTemplate->htmDocContent;
     }
 }
                

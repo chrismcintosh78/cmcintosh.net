@@ -9,4 +9,10 @@ require_once($GLOBALS["APP_PATH"] . "controllers/classes/Router.php");
 require_once($GLOBALS["APP_PATH"] . "controllers/classes/Document.php");
 require_once($GLOBALS["APP_PATH"] . "controllers/classes/Template.php");
 require_once($GLOBALS["APP_PATH"] . "controllers/classes/View.php");
+
+
+
+
+//initialize the template engine
+$GLOBALS["OBJ_TEMPLATE"] = new Template($GLOBALS["TEMPLATE_PATH"]);
 ?>
