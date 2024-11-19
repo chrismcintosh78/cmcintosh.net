@@ -9,5 +9,6 @@ $strDefaultRoute = $CONFIG['APP']['DEFAULT_ROUTE'];
 $strRoute = isset($_GET['strRoute'])? $_GET['strRoute'] : $strDefaultRoute;
 
 $objRouter = new Router($strRoute); 
+print "finna route";
 $objRouter->route();
 ?>

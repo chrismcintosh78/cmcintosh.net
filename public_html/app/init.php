@@ -5,14 +5,18 @@ error_reporting(E_ALL);
 $CONFIG = parse_ini_file("models/config.ini", true);
 $GLOBALS["APP_PATH"] = $CONFIG['APP']['PATH'];
 $GLOBALS["TEMPLATE_PATH"] = $CONFIG['APP']['PATH'] . $CONFIG["TEMPLATE"]["PATH"];
+$GLOBALS["RESOURCE_PATH"] = $CONFIG["TEMPLATE"]["RESOURCE_PATH"];
 require_once($GLOBALS["APP_PATH"] . "controllers/classes/Router.php");
-require_once($GLOBALS["APP_PATH"] . "controllers/classes/Document.php");
-require_once($GLOBALS["APP_PATH"] . "controllers/classes/Template.php");
+require_once($GLOBALS["APP_PATH"] . "controllers/classes/_Document.php");
+require_once($GLOBALS["APP_PATH"] . "controllers/classes/_Template.php");
 require_once($GLOBALS["APP_PATH"] . "controllers/classes/View.php");
 
 
 
+$arrTemplateData = [];
+$arrTemplateData["APP_LOGO"] = $CONFIG["APP"]["LOGO"];
+$arrTemplateData["APP_NAME"] = $CONFIG["APP"]["NAME"];
 
 //initialize the template engine
-$GLOBALS["OBJ_TEMPLATE"] = new Template($GLOBALS["TEMPLATE_PATH"]);
+$GLOBALS["OBJ_TEMPLATE"] = new Template($GLOBALS["TEMPLATE_PATH"], $arrTemplateData);
 ?>
