@@ -10,6 +10,12 @@ class Document
         @$this->objDocument->loadHTML($strFile, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $this->objDocumentMap = new DOMXPath($this->objDocument);
     }
+    public static function GetXDocument(String $strFile){
+        $objDocument = new DOMDocument();
+        @$objDocument->loadXML($strFile, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $objXDoc = new DOMXPath($objDocument);
+        return $objXDoc;
+    }
     public function createNode($strTagName, $strInnerHTML=""){
         $node = $this->objDocument->createElement($strTagName);
         if($strInnerHTML!= ""){
@@ -125,8 +131,25 @@ class Document
         return $this->objDocument->saveHTML();
     }
 }
-$htmTemplate = file_get_contents("/var/www/html/cmcintosh.net/public_html/app/templates/app.html");
+$htmTemplate = file_get_contents("/media/cmcintosh/rootMX23/var/www/html/cmcintosh.net/public_html/app/models/home.xml");
 $objDoc = new Document($htmTemplate);
-$arrNodes = $objDoc->objDocumentMap->query("//div");
-var_dump($arrNodes);
+$arrNodes = $objDoc->objDocumentMap->query("//*");
+$xmlXParams = Document::GetXDocument("/var/www/html/cmcintosh.net/public_html/app/models/home.xml");
+$d = $xmlXParams->query("//*");
+$arrKeyVals = [];
+//$arrNodes = $xmlXParams->query("//param");
+
+
+$xml = new SimpleXMLElement(file_get_contents("/media/cmcintosh/rootMX23/var/www/html/cmcintosh.net/public_html/app/models/home.xml"));
+$arrParams = $xml->xpath('//param');
+$arrKeyVals = [];
+foreach ($arrParams as $param) {
+    $dataview = (string)$param['data-view'];
+    if (!empty($dataview)) {
+        $arrKeyVals[$dataview] = (string)$param;
+    }
+}
+
+// If you want to see the results:
+print_r($arrKeyVals);
 ?>

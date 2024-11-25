@@ -145,12 +145,22 @@ class Document extends DOMDocument {
      * @param string $strSelector The CSS selector.
      * @return string The equivalent XPath query.
      */
+
+    
     private function cssToXPath($strSelector) {
         if (strpos($strSelector, '#') === 0) {
+            // Convert ID selectors to XPath
             return "//*[@id='" . substr($strSelector, 1) . "']";
         } elseif (strpos($strSelector, '.') === 0) {
+            // Convert class selectors to XPath
             return "//*[contains(concat(' ', normalize-space(@class), ' '), ' " . substr($strSelector, 1) . " ')]";
+        } elseif (preg_match('/^\[([^\]=]+)=["\']?([^"\']+)["\']?\]$/', $strSelector, $matches)) {
+            // Convert attribute selectors (e.g., [data-template="variable"]) to XPath
+            $strAttr = $matches[1];
+            $strValue = $matches[2];
+            return "//*[@" . $strAttr . "='" . $strValue . "']";
         } else {
+            // Default to tag name
             return "//" . $strSelector;
         }
     }

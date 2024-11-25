@@ -108,20 +108,12 @@ class Template extends Document {
         foreach ($this->arrViewData as $strKey => $mixValue) {
             $strPattern = "/{{\s*$strKey\s*}}/";
             $objTextNodes = $this->getXPath()->query('//text()');
-
             foreach ($objTextNodes as $objNode) {
                 if (preg_match($strPattern, $objNode->nodeValue)) {
-                    if ($this->isHTML($mixValue)) {
+                    if($this->isHTML($mixValue)) {
                         $objFragment = $this->createDocumentFragment();
                         @$objFragment->appendXML($mixValue);
                         $objNode->parentNode->replaceChild($objFragment, $objNode);
-                    } elseif ($this->isPHPExpression($mixValue)) {
-                        try {
-                            $mixEvaluatedValue = eval('return ' . $mixValue . ';');
-                            $objNode->nodeValue = preg_replace($strPattern, $mixEvaluatedValue, $objNode->nodeValue);
-                        } catch (Exception $objException) {
-                            throw new Exception("Failed to evaluate PHP expression for key '$strKey': " . $objException->getMessage());
-                        }
                     } else {
                         $objNode->nodeValue = preg_replace($strPattern, $mixValue, $objNode->nodeValue);
                     }
@@ -136,6 +128,7 @@ class Template extends Document {
      * @param string $strValue The value to check.
      * @return bool True if it is a PHP expression, false otherwise.
      */
+
     private function isPHPExpression($strValue) {
         return is_string($strValue) && preg_match('/^\s*return\s+.+;\s*$/', $strValue);
     }

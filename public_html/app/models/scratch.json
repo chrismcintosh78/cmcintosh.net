@@ -1,0 +1,15 @@
+"CONTENT_LEFT" : {
+    "heading" : "<h3>Mobile and Desktop App Development</h3>",
+    "content" : "<p> Stay ahead in the digital era with our mobile and desktop app development services. We create powerful, user-friendly applications that run smoothly across all deviceensuring your audience has the best experience whether they’re on the go or at their desk. Our expertise spans both iOS and Android platforms, as well as Windows and macOS, providing you with versatile and robust solutions.</p>",
+    "cta_btn" : "<div><a href='#'>Learn More</a></div>"
+},
+"CONTENT_CENTER" :{
+    "heading" : "<h2>Graphic Design and Branding</h2>",
+    "content" : "<p>Make a lasting impression with our professional graphic design and branding services. As an Adobe Certified expert, I craft visually stunning and cohesive designs that resonate with your target audience. From logos and marketing materials to complete brand identities, we ensure your brand stands out and communicates your vision effectively.</p>",
+    "cta_btn" : "<div><a href='#'>Learn More</a></div>"
+},
+"CONTENT_RIGHT" : {
+    "heading" : "<h2>Computer Repair and Consulting</h2>",
+    "content" : "<p>Keep your systems running smoothly with our computer repair and consulting services. With A+ and Network+ certifications, we offer reliable solutions for all your hardware and software issues. Our consulting services provide expert advice and strategies to optimize your IT infrastructure, ensuring maximum efficiency and minimal downtime for your business.</p>",
+    "cta_url" : "<div><a href='#'>Learn More</a></div>" 
+}

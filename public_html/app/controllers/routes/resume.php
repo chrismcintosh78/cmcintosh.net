@@ -4,16 +4,22 @@ class Resume{
     public $objView;
     public $objModel;
     public $arrData;
-    public function __construct($objTemplate){
-        $this->objTemplate = $objTemplate;
-        $this->arrData = [
-                            "strPageTitle" => "Resume", 
-                            "htmIconLogo" => "",
-                            "strPageHeading" => "Welcome to my resume!"
+    public function __construct($strSubRoute=""){
+      //  $strModelPath = $GLOBALS["APP_PATH"] . 'models/home.json';
+
+        //$jsnPageData = file_get_contents($strModelPath);
+       // $objModel = json_decode($jsnPageData);
+        $objModel = new stdClass();
+        $objModel->strPageName = "Resume";///"
+        $objModel->arrParams = [
                         ];
-        $this->objTemplate->addData($this->arrData);
-        $this->objTemplate->compile();
-        print $this->objTemplate->htmDocContent;
+        $objView = new View($objModel);
+       /* */
+        print "home";
+        //var_dump($objView->objPrimary);
+        //var_dump($objView->objPrimary);
+        //$this->arrData["htmMain"] = $objView->htmPrimary;
+
     }
 }
                
