@@ -5,6 +5,7 @@ class View{
     public $objSecondary;
     public $htmPrimary;
 
+<<<<<<< HEAD
     public function __construct($objModel) {
         $strRoute = lcfirst($objModel->strPageName);
         $strViewPath = $GLOBALS["VIEW_PATH"] . $strRoute . ".html";
@@ -28,6 +29,19 @@ class View{
         // Debugging output
 
         $GLOBALS["OBJ_TEMPLATE"]->addData($objModel);
+=======
+    public function __construct($arrKeyVals) {
+        
+        $strRoute = lcfirst($arrKeyVals["strPageName"]);
+        $strViewPath = $GLOBALS["VIEW_PATH"] . $strRoute . ".html";
+        $htmViewTemplate = file_get_contents($strViewPath);
+        $GLOBALS["OBJ_TEMPLATE"]->insertView($strViewPath, "VIEW");
+        
+
+        // Debugging output
+
+        $GLOBALS["OBJ_TEMPLATE"]->addData($arrKeyVals);
+>>>>>>> 5867a93 (done)
         $GLOBALS["OBJ_TEMPLATE"]->compile();
         print $GLOBALS["OBJ_TEMPLATE"]->saveHTML();
     }

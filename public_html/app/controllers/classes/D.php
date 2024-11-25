@@ -140,6 +140,7 @@ $arrKeyVals = [];
 //$arrNodes = $xmlXParams->query("//param");
 
 
+<<<<<<< HEAD
 $xml = new SimpleXMLElement(file_get_contents("/media/cmcintosh/rootMX23/var/www/html/cmcintosh.net/public_html/app/models/home.xml"));
 $arrParams = $xml->xpath('//param');
 $arrKeyVals = [];
@@ -149,6 +150,9 @@ foreach ($arrParams as $param) {
         $arrKeyVals[$dataview] = (string)$param;
     }
 }
+=======
+
+>>>>>>> 5867a93 (done)
 
 // If you want to see the results:
 print_r($arrKeyVals);

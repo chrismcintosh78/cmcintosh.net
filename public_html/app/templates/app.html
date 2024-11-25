@@ -27,7 +27,48 @@
         <main data-view="VIEW">
         </main>
         <div class="PANE_FOOTER">
-            &copy; 2022 {{APP_NAME}}. All rights reserved.
+            <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #ddd;">
+                <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;">
+                  <!-- Footer Links -->
+                  <div style="margin: 5px;">
+                    <a href="/TOS" style="color: #007bff; text-decoration: none; font-size: 14px;">Terms of Service</a>
+                  </div>
+                  <div style="margin: 5px;">
+                    <a href="/Privacy" style="color: #007bff; text-decoration: none; font-size: 14px;">Privacy Policy</a>
+                  </div>
+                  <div style="margin: 5px;">
+                    <a href="/contact" style="color: #007bff; text-decoration: none; font-size: 14px;">Contact</a>
+                  </div>
+                </div>
+              
+                <!-- Social Links -->
+                <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="color: #3b5998; font-size: 24px; text-decoration: none;">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style="color: #1da1f2; font-size: 24px; text-decoration: none;">
+                    <i class="bx bxl-twitter"></i>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style="color: #0077b5; font-size: 24px; text-decoration: none;">
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: #e4405f; font-size: 24px; text-decoration: none;">
+                    <i class="bx bxl-instagram"></i>
+                  </a>
+                </div>
+              
+                <!-- Copyright Section -->
+                <div style="margin-top: 15px; font-size: 14px; color: #6c757d;">
+                  © <span id="year"></span> {{APP_NAME}}. All rights reserved.
+                </div>
+              </footer>
+              
+              <!-- Script for Dynamic Year -->
+              <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+              </script>
+              
+             
         </div>
     </div>
 </body>

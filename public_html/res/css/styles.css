@@ -31,6 +31,7 @@
     /*SIZING*/
     --app-section-padding: .5rem;
     --app-layout-width : 100%;
+    --app-border-radius : 1rem;
 
     /*LINKS*/
 
@@ -143,6 +144,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f8f9fa;
     height: 100vh;
 }
 
@@ -150,10 +152,11 @@ body {
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4,auto) 1fr;
-    outline: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     width: var(--app-layout-width);
    /* height:100vh; */
-    height:100vh;
+
     box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.5), 5px 0 5px -5px rgba(0, 0, 0, 0.5);
 }
     /*
@@ -199,7 +202,7 @@ body {
                 .NAV_LINKS li:hover {
                     background-color: var(--app-clr-primary-muted);
                     border-bottom:3px solid var(--app-clr-link);
-                    border-top-left-radius: 15px;
+                    border-top-left-radius: var(--app-border-radius);
                     color: var(--app-clr-secondary);
                 }
                     .NAV_LINKS li a{
@@ -252,7 +255,15 @@ body {
         .MAIN_HOME{
 
         }
-
+            .MAIN_HOME h1{
+                background-color: var(--app-clr-primary);
+                border-top-right-radius: var(--app-border-radius);
+                padding: var(--app-section-padding);
+            }
+            .MAIN_HOME p{
+                background-color: var(--app-clr-primary-muted);
+                padding: var(--app-section-padding);
+            }
     /*
     ==============================================================
     4 ROW INFORMATION 
@@ -266,10 +277,14 @@ body {
         padding: var(--app-section-padding);
     }
         .PANE_CONTENT_INFO div{
-            border: 1px solid black;
             padding: var(--app-section-padding);
         }
-
+            .INFO_CARD{
+                padding: inherit;
+                background-color: var(--app-clr-secondary);
+                border-top-left-radius: var(--app-border-radius);
+            }
+`
 
     /*
     ==============================================================

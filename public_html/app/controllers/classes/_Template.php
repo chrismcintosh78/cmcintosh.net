@@ -107,6 +107,7 @@ class Template extends Document {
     public function compile() {
         foreach ($this->arrViewData as $strKey => $mixValue) {
             $strPattern = "/{{\s*$strKey\s*}}/";
+            //$objTextNodes = $this->getXPath()->query('//text()');
             $objTextNodes = $this->getXPath()->query('//text()');
             foreach ($objTextNodes as $objNode) {
                 if (preg_match($strPattern, $objNode->nodeValue)) {
