@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param data-view="RESUME_HEADING">
+        Welcome to My Professional Journey
+    </param>
+    <param data-view="RESUME_INTRO">
+        <![CDATA[
+            Dive into the expertise and experience that define my career as a Full Stack Developer. 
+            With over 15 years in the tech industry, my resume showcases a versatile skill set, 
+            including web development, network consulting, 
+            and IT support. Whether you're seeking an innovative developer to join your team 
+            or looking for inspiration for your own career path, 
+            this comprehensive resume highlights the dedication, creativity, 
+            and problem-solving that I bring to every project. Let’s explore what I can contribute 
+            to your next big opportunity.
+        ]]>
+    </param>
+
+    <!-- Left Card: Skills -->
+    <param data-view="INFO_SKILLS_HEADING">
+        Skills
+    </param>
+    <param data-view="INFO_SKILLS_INFO">
+        <![CDATA[
+            Expertise in web development, network consulting, and IT support. Proficient in JavaScript, PHP, 
+            Node.js, HTML/CSS, and more. Focused on delivering high-quality, scalable solutions.
+        ]]>
+    </param>
+    <param data-view="INFO_SKILLS_CLICKURL">
+        ?strRoute=/Resume/Skills
+    </param>
+    <param data-view="INFO_SKILLS_CLICKTXT">
+        Learn More
+    </param>
+
+    <!-- Center Card: Education -->
+    <param data-view="INFO_EDU_HEADING">
+        Education
+    </param>
+    <param data-view="INFO_EDU_INFO">
+        <![CDATA[
+            <ul class="INFO_LIST">
+                <li>
+                    <strong>Fresno Institute of Technology (F.I.T):</strong>
+                    <ul>
+                        <li>Graduated three courses:</li>
+                        <li>Computer Repair and Networking</li>
+                        <li>Web and Graphic Design</li>
+                        <li>Web Application Development</li>
+                    </ul>
+                </li>
+            </ul>
+        ]]>
+    </param>
+    <param data-view="INFO_EDU_CLICKURL">
+        ?strRoute=/Resume/Education
+    </param>
+    <param data-view="INFO_EDU_CLICKTXT">
+        Learn More
+    </param>
+
+    <!-- Right Card: Download -->
+    <param data-view="INFO_DOWNLOAD_HEADING">
+        Download Resume
+    </param>
+    <param data-view="INFO_DOWNLOAD_INFO">
+        Download my resume in multiple formats and take a deeper look at my professional journey.
+    </param>
+    <param data-view="INFO_DOWNLOAD_CLICKURL">
+        ?strRoute=/Resume/Download
+    </param>
+    <param data-view="INFO_DOWNLOAD_CLICKTXT">
+        Download Now
+    </param>
+</params>

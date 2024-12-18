@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+.MAIN_RESUME {
+    background-color: #f8f9fa; /* Light neutral background for contrast */
+    border-radius: 8px; /* Smooth rounded corners */
+    padding: 40px 20px; /* Comfortable spacing */
+    max-width: 900px; /* Constrain width for readability */
+    margin: 30px auto; /* Center on the page with margin spacing */
+    text-align: center; /* Center-align text for a header feel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+}
+
+.MAIN_HEADING {
+    font-size: 2.5rem; /* Prominent heading */
+    font-weight: bold; /* Emphasize heading */
+    color: #343a40; /* Dark gray for readability */
+    margin-bottom: 20px; /* Space between heading and intro */
+}
+
+.MAIN_INTRO {
+    font-size: 1.2rem; /* Larger than regular text for emphasis */
+    line-height: 1.8; /* Comfortable line spacing for readability */
+    color: #6c757d; /* Medium gray for contrast against heading */
+    margin: 0; /* Remove default margin */
+}
+        .INFO_CARD {
+    background-color: #f9f9f9; /* Neutral light background */
+    border: 1px solid #e0e0e0; /* Soft border for a clean look */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Internal spacing */
+    max-width: 400px; /* Constrain width */
+    margin: 20px auto; /* Center card on page */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif; /* Clean font */
+    text-align: center; /* Center-align text */
+}
+
+.INFO_HEADING {
+    font-size: 1.5rem; /* Slightly larger heading */
+    color: #333; /* Neutral dark text */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.INFO_INFO {
+    font-size: 1rem; /* Regular size for content */
+    color: #555; /* Slightly lighter text */
+    line-height: 1.5; /* Comfortable line spacing */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.INFO_CTA {
+    display: inline-block; /* Makes it a button-like link */
+    font-size: 1rem; /* Consistent size */
+    color: white; /* Contrast text color */
+    background-color: #007bff; /* Clean blue for CTA */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Slightly rounded button */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+.INFO_CTA:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+    </style>
+</head>
+<body
+<div class="INFO_CARD">
+    <h3 class="INFO_HEADING">Graphic Design and Branding</h3>
+    <p class="INFO_INFO">
+        Make a lasting impression with our professional graphic design and 
+        branding services. We craft visually stunning and cohesive designs that resonate 
+        with your target audience. From logos and marketing materials 
+        to complete brand identities, we ensure your brand stands 
+        out and communicates your vision effectively.
+    </p>
+    <a class="INFO_CTA" href="?strRoute=/Services/Design">More Info</a>
+</div>
+   
+
+<div class="MAIN_RESUME">
+    <h1 class="MAIN_HEADING">{{RESUME_HEADING}}</h1>
+    <p class="MAIN_INTRO">{{RESUME_INTRO}}</p>
+</div>
+</body>
+</html>

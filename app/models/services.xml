@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param data-view="SERVICES_HEADING">
+    We Deliver Excellence
+    </param>
+    <param data-view="SERVICES_INTRO">
+        <![CDATA[
+            Explore a world of possibilities with our tailored services. Whether you need state-of-the-art web applications, 
+            stunning visual designs, or reliable IT diagnostics, we have the expertise to bring your vision to life. 
+            At cmcintosh.net, we combine innovation and dedication to deliver solutions that make a lasting impact.
+            Discover the services that will take your digital presence to the next level. 
+            Let’s turn your challenges into opportunities and your ideas into reality!
+        ]]>
+    </param>
+
+    <!--LEFT CARD-->
+    <param data-view="INFO_DEVEL_HEADING">Development</param>
+    <param data-view="INFO_DEVEL_INFO">
+        <![CDATA[
+        Stay ahead in the digital era with our Web Application Development services. 
+        We create powerful, user-friendly applications that run smoothly across all devices, ensuring your audience has the best experience 
+        whether they’re on the go or at their desk. Our expertise spans Linux, Windows and macOS, 
+        providing you with versatile and robust solutions.
+        ]]>
+    </param>
+    <param data-view="INFO_DEVEL_CLICKURL">?strRoute=/Services/Development</param>
+    <param data-view="INFO_DEVEL_CLICKTXT">Get Started</param>
+    <!--///////////////////////////////////-->
+
+
+    <!--MIDDLE CARD-->
+    <param data-view="INFO_DESIGN_HEADING">Design</param>
+    <param data-view="INFO_DESIGN_INFO">
+        <![CDATA[
+            Make a lasting impression with our professional graphic design and 
+            branding services. We craft visually stunning and cohesive designs that resonate 
+            with your target audience. From logos and marketing materials 
+            to complete brand identities, we ensure your brand stands 
+            out and communicates your vision effectively.
+        ]]>
+    </param>
+    <param data-view="INFO_DESIGN_CLICKURL">?strRoute=/Services/Design</param>
+    <param data-view="INFO_DESIGN_CLICKTXT"> More Info</param>
+    <!--///////////////////////////////////-->
+
+  
+    <!--RIGHT CARD-->
+    <param data-view="INFO_DIAG_HEADING">Diagnostics</param>
+    <param data-view="INFO_DIAG_INFO">
+        <![CDATA[
+                Keep your systems running smoothly with our computer repair and 
+                consulting services. With A+ and Network+ certifications, 
+                we offer reliable solutions for all your hardware and software issues. 
+                Our consulting services provide expert advice and strategies to optimize 
+                your IT infrastructure, ensuring maximum efficiency and minimal 
+                downtime for your business.
+        ]]>
+    </param>
+    <param data-view="INFO_DIAG_CLICKURL">?strRoute=/Services/Diagnostics</param>
+    <param data-view="INFO_DIAG_CLICKTXT">Get It Fixed</param>
+    <!--///////////////////////////////////-->
+
+  
+</params>
+   

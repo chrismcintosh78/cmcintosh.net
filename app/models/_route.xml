@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param data-view="_ROUTE_HEADING">
+    MY NEW ROUTE
+    </param>
+    <param data-view="_ROUTE_INTRO">
+        <![CDATA[
+            Some information about _route
+        ]]>
+    </param>
+    <param data-view="VIEW_INFO_LEFT">
+        <![CDATA[
+            <h3>Piece Heading</h3>
+            <p>
+                Piece Content
+            </p>
+        ]]>
+    </param>
+        <param data-view="VIEW_INFO_CENTER">
+        <![CDATA[
+            <h3>Piece Heading</h3>
+            <p>
+                Piece Content
+            </p>
+        ]]>
+    </param>
+        <param data-view="VIEW_INFO_RIGHT">
+        <![CDATA[
+            <h3>Piece Heading</h3>
+            <p>
+                Piece Content
+            </p>
+        ]]>
+    </param>
+</params>
+   

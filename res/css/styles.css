@@ -1,0 +1,424 @@
+:root{
+    /*COLORS*/
+    --app-clr-primary:;
+    --app-clr-secondary:;
+    --app-clr-primary-muted:;
+    --app-clr-secondary-muted:;
+    /*TEXT*/
+    --app-clr-txt-drk: #2c3e50;
+    --app-clr-txt-lte:#ecf0f1;
+
+
+
+    /*BG*/
+    --app-clr-section-top: ;
+
+    --app-nav-link-hover-color:;
+
+
+    /*TYPO*/
+    --app-typo-ff:Arial, Helvetica, sans-serif;
+    --app-typo-fs : 14px;
+    --app-typo-h: 3rem;
+    --app-typo-nav: 1.5rem;
+    --app-typo-content-h: 2rem;
+    --app-typo-content-txt: 1rem;
+    --app-typo-content-subh: 1.5rem;
+    --app-typo-content-subtxt: 1rem;
+
+
+    /*SIZING*/
+    --app-section-padding: .5rem;
+    --app-layout-width : 100%;
+    --app-border-radius : 1rem;
+
+    /*LINKS*/
+
+
+    /*NAVIGATION*/
+    --app-nav-bg: #f8f9fa;
+}
+
+/* Media queries for different breakpoints */
+/* Phone (max-width: 600px) */
+@media (max-width: 500px) {
+    :root {
+        --app-fs: 14px;
+        /* Smaller font size */
+        /* Slightly reduce layout width */
+    }
+    .HEADER_NAV{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .PANE_CONTENT_INFO{
+        flex-direction: column !important;
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (max-width: 650px) {
+    :root {
+        --app-fs: 14px;
+        /* Slightly larger font size for small desktops */
+        /* Reduce layout width */
+    }
+}
+/* Tablet (min-width: 600px) and (max-width: 900px) */
+@media (min-width: 500px) and (max-width: 800px) {
+    :root {
+        --app-fs: 14px;
+        /* Adjust font size for tablets */
+        /*--app-layout-width: 650px;*/
+        /* Adjust layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 650px) and (max-width: 950px) {
+    :root {
+        --app-fs: 16px;
+        /* Slightly larger font size for small desktops */
+       /* --app-layout-width: 800px;*/
+       --app-layout-width: 100%;
+        /* Reduce layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 800px) and (max-width: 1100px) {
+    :root {
+        --app-fs: 16px;
+        /* Slightly larger font size for small desktops */
+       /* --app-layout-width: 950px; */
+       --app-layout-width: 85vw;
+
+        /* Reduce layout width */
+    }
+}
+/* Small desktop (min-width: 900px) and (max-width: 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    :root {
+        --app-fs: 18px;
+        /* Slightly larger font size for small desktops */
+        /* --app-layout-width: 1100px; */
+        --app-layout-width: 82.5vw;
+        /* Reduce layout width */
+    }
+}
+/* Large desktop (min-width: 1200px) */
+@media (min-width: 1200px) {
+    :root {
+        --app-fs: 18px;
+        /* Larger font size for large desktops */
+        --app-layout-width: 80vw;
+        /* Reduce layout width to create spacing */
+    }
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/gfont.woff2) format('woff2');
+  }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+  
+html {
+    font-family: var(--app-typo-ff);
+    font-size: var(--app-fs);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+
+}
+h1{
+    font-size: 1.5rem;
+}
+.APP_PANE{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,auto) 1fr;
+    width: var(--app-layout-width);
+    height:100vh;
+
+   
+}
+    /*
+    ==============================================================
+    1 ROW HEADER
+        CONTAINS:LOGO, NAME AND NAVIGATION
+    ==============================================================
+    */
+    .PANE_HEADER {
+        background-color: #007bff;
+        color:white;
+        text-align: center;
+    }
+    .HEADER_NAV {
+        display: flex;
+        justify-content: space-between; /* Space out brand and links */
+        align-items: center; /* Align items vertically */
+        background-color: #007bff; /* Primary blue */
+        padding: 10px 20px; /* Comfortable padding */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    
+    .NAV_BRAND {
+        display: flex;
+        align-items: center; /* Center-align logo and name */
+    }
+    
+    .NAV_BRAND logo {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-right: 10px; /* Space between logo and name */
+    }
+    
+    .NAV_BRAND name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff; /* White for text */
+    }
+    
+    .NAV_LINKS {
+        list-style: none; /* Remove bullets */
+        display: flex; /* Horizontal layout */
+        margin: 0;
+        padding: 0;
+    }
+    
+    .NAV_LINKS li {
+        margin-left: 15px; /* Spacing between links */
+    }
+    
+    .NAV_LINKS a {
+        text-decoration: none; /* Remove underline */
+        color: #ffffff; /* White links */
+        font-weight: bold;
+        padding: 8px 15px; /* Padding for clickable area */
+        border-radius: 4px; /* Subtle rounding */
+        transition: background-color 0.3s ease; /* Smooth hover transition */
+    }
+    
+    .NAV_LINKS a:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+
+    /*
+    ==============================================================
+    2 ROW HERO
+        CONTAINS:ANIMATION / VISUAL
+    ==============================================================
+    */      
+    .PANE_HERO{
+        padding: var(--app-section-padding);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+        .HERO_SHOW {
+            margin: 10px;
+            font-size: 24px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .HERO_SHOW.HERO_HIDE {
+            opacity: 1;
+            transform: translateY(0);
+        } 
+    
+    
+    /*
+    ==============================================================
+    3 ROW MAIN CONTENT
+        CONTAINS:VIEWS MAIN CONTENT AREA 
+    ==============================================================
+    */
+    .PANE_CONTENT_MAIN{
+        padding: var(--app-section-padding);
+    }
+        /*THE ROUTES HEADING*/
+        .MAIN_CARD {
+            background-color: #e3f2fd; /* Light neutral background for contrast */
+            border-radius: 8px; /* Smooth rounded corners */
+            padding: 40px 20px; /* Comfortable spacing */
+            max-width: 900px; /* Constrain width for readability */
+            margin: 30px auto; /* Center on the page with margin spacing */
+            text-align: center; /* Center-align text for a header feel */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle elevation */
+            font-family: Arial, sans-serif; /* Clean, modern font */
+        }
+
+        .MAIN_HEADING {
+            font-size: 2.5rem; /* Prominent heading */
+            font-weight: bold; /* Emphasize heading */
+            color: #343a40; /* Dark gray for readability */
+            margin-bottom: 20px; /* Space between heading and intro */
+        }
+        
+        .MAIN_INTRO {
+            font-size: 1.2rem; /* Larger than regular text for emphasis */
+            line-height: 1.8; /* Comfortable line spacing for readability */
+            color: #6c757d; /* Medium gray for contrast against heading */
+            margin: 0; /* Remove default margin */
+        }   
+    /*
+    ==============================================================
+    4 ROW INFORMATION 
+        CONTAINS:ADS, CTA'S
+    ==============================================================
+    */
+    .PANE_CONTENT_INFO {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: var(--app-section-padding);
+    }
+        .PANE_CONTENT_INFO > div:nth-child(2){
+            margin-left: var(--app-section-padding);
+            margin-right: var(--app-section-padding);
+        }
+        .INFO_CARD {
+            background-color: #f9f9f9; /* Neutral light background */
+            border: 1px solid #e0e0e0; /* Soft border for a clean look */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Internal spacing */
+            max-width: 400px; /* Constrain width */
+            margin: 20px auto; /* Center card on page */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            font-family: Arial, sans-serif; /* Clean font */
+            text-align: center; /* Center-align text */
+        }
+        
+        .INFO_HEADING {
+            font-size: 1.5rem; /* Slightly larger heading */
+            color: #333; /* Neutral dark text */
+            margin-bottom: 10px; /* Space below heading */
+        }
+        
+        .INFO_INFO {
+            font-size: 1rem; /* Regular size for content */
+            color: #555; /* Slightly lighter text */
+            line-height: 1.5; /* Comfortable line spacing */
+            margin-bottom: 20px; /* Space below paragraph */
+        }
+        
+        .INFO_CTA {
+            display: inline-block; /* Makes it a button-like link */
+            font-size: 1rem; /* Consistent size */
+            color: white; /* Contrast text color */
+            background-color: #007bff; /* Clean blue for CTA */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 20px; /* Button padding */
+            border-radius: 5px; /* Slightly rounded button */
+            transition: background-color 0.3s; /* Smooth hover transition */
+        }
+        
+        .INFO_CTA:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+           
+
+    /*
+    ==============================================================
+    5 ROW FOOTER
+        CONTAINS:COPYRIGHT, TOS, PRIVACY, SOCIAL LINKS
+    ==============================================================
+    */
+    .PANE_FOOTER {
+        background-color: #007bff; /* Primary blue */
+        color: #ffffff; /* White text for contrast */
+        padding: 20px 40px; /* Comfortable spacing */
+        display: flex;
+        flex-wrap: wrap; /* Ensure it adjusts for smaller screens */
+        justify-content: space-between; /* Space between sections */
+        align-items: center; /* Center items vertically */
+        border-radius: 0 0 8px 8px; /* Rounded corners on the bottom */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow above footer */
+    }
+    
+    .FOOTER_LINKS {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 5px; /* Spacing between links */
+    }
+    
+    .FOOTER_LINKS a {
+        color: #ffffff; /* White text for links */
+        text-decoration: none; /* Remove underline */
+        font-size: 14px; /* Font size */
+        transition: color 0.3s ease; /* Smooth hover effect for color */
+    }
+    
+    .FOOTER_LINKS a:hover {
+        color: #e3f2fd; /* Lighter blue on hover for visibility */
+        text-decoration: underline; /* Add underline on hover for clarity */
+    }
+    
+    .FOOTER_SOCIAL {
+        display: flex;
+        gap: 15px; /* Space between social icons */
+    }
+    
+    .FOOTER_SOCIAL a {
+        font-size: 24px; /* Icon size */
+        text-decoration: none; /* Remove underline */
+        color: #ffffff; /* Default white color for icons */
+        border: 2px solid #ffffff; /* White outline */
+        border-radius: 50%; /* Circle shape */
+        padding: 10px; /* Space around the icon */
+        transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth hover effects */
+    }
+    
+    .FOOTER_SOCIAL a:hover {
+        transform: scale(1.2); /* Slight zoom effect on hover */
+        color: #e3f2fd; /* Change color on hover */
+        border-color: #e3f2fd; /* Change outline to lighter blue on hover */
+    }
+    
+    .FOOTER_COPY {
+        font-size: 14px;
+        text-align: center; /* Center text on smaller screens */
+        margin-top: 10px;
+        flex: 1 1 100%; /* Ensure it spans full width on smaller screens */
+    }
+    
+    .FOOTER_COPY #year {
+        font-weight: bold; /* Make the year stand out */
+    }
+    
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .PANE_FOOTER {
+            flex-direction: column; /* Stack sections vertically */
+            text-align: center; /* Center align all text */
+        }
+    
+        .FOOTER_SOCIAL {
+            justify-content: center; /* Center icons on smaller screens */
+            margin-top: 10px; /* Add space above social icons */
+        }
+    
+        .FOOTER_COPY {
+            margin-top: 20px; /* Space out sections */
+        }
+    }
+    

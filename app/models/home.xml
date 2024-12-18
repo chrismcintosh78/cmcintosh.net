@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params>
+    <param data-view="HOME_HEADING">
+    We Build Digital
+    </param>
+    <param data-view="HOME_INTRO">
+        <![CDATA[
+            Welcome to cmcintosh.net! I’m Christopher McIntosh, 
+            a seasoned Full Stack Developer with over 15 years of 
+            experience navigating the ever-evolving world of technology. 
+            My journey has equipped me with a profound understanding 
+            of digital solutions, ranging from web applications to 
+            computer and network repair.
+            If you’re a coder, explore my current projects for inspiration. 
+            Potential employers can view the web version of my resume, 
+            showcasing my professional journey. 
+            And if you’re in need of a custom web application, expert consulting, 
+            or reliable computer and network repair services, 
+            request a quote tailored to your needs. 
+            Let’s build something extraordinary together!
+        ]]>
+    </param>
+
+    <!--LEFT CARD-->
+    <param data-view="INFO_PROJECTS_HEADING">Explore My Work</param>
+    <param data-view="INFO_PROJECTS_INFO">
+        <![CDATA[
+            Dive into my portfolio and explore projects that showcase my technical expertise and creative problem-solving. From web applications to diagnostic tools, see the work that defines my professional journey.
+        ]]>
+    </param>
+    <param data-view="INFO_PROJECTS_CLICKURL">?strRoute=/Projects</param>
+    <param data-view="INFO_PROJECTS_CLICKTXT">View Projects</param>
+    <!--///////////////////////////////////-->
+
+
+    <!--MIDDLE CARD-->
+    <param data-view="INFO_QUOTE_HEADING">Tailored Solutions</param>
+    <param data-view="INFO_QUOTE_INFO">
+        <![CDATA[
+            Have a project in mind? Let’s discuss your ideas and create a solution that meets your unique needs. From consultation to delivery, I’ll guide you every step of the way.
+        ]]>
+    </param>
+    <param data-view="INFO_QUOTE_CLICKURL">?strRoute=/Services/Quote</param>
+    <param data-view="INFO_QUOTE_CLICKTXT"> More Info</param>
+    <!--///////////////////////////////////-->
+
+  
+    <!--RIGHT CARD-->
+    <param data-view="INFO_RESUME_HEADING">Skills and Expertise</param>
+    <param data-view="INFO_RESUME_INFO">
+        <![CDATA[
+            Discover the skills and certifications that set me apart. Explore my resume to learn how my experience can bring value to your next project or business initiative.
+        ]]>
+    </param>
+    <param data-view="INFO_RESUME_CLICKURL">?strRoute=/Resume</param>
+    <param data-view="INFO_RESUME_CLICKTXT">View Resume</param>
+    <!--///////////////////////////////////-->
+
+  
+</params>
+   

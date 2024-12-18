@@ -1,0 +1,12 @@
+{
+    "name": "cmcintosh.net",
+    "host": "ftp.cmcintosh.net",
+    "protocol": "ftp",
+    "port": 21,
+    "username": "dev@cmcintosh.net",
+    "password": "Yungthr1ll4$",
+    "remotePath": "/public_html",
+    "uploadOnSave": false,
+    "useTempFile": false,
+    "openSsh": false
+}
